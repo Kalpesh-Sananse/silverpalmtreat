@@ -1,50 +1,166 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Stay</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <style>
-            .flex-container {
-              display: flex;
-              flex-wrap: wrap;
-            }
-            .image-section, .description-section {
-              flex: 1 1 50%;
-              padding: 10px;
-            }
-            .image-section img {
-              width: 100%;
-              height: auto;
-            }
-            .gallery img {
-             width: 100%;
-             height: auto;
-            }
-        
-            @media (max-width: 768px) {
-              .image-section, .description-section {
-                flex: 1 1 100%;
-              }
-            }
-          </style>
-<script>
-    function openWhatsApp() {
-      var phoneNumber = "+918767932356"; // Enter the recipient's phone number in international format
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-      var url = `https://wa.me/${phoneNumber}`;
-      window.open(url, '_blank'); // Opens WhatsApp in a new tab
+        .image-section,
+        .description-section {
+            flex: 1 1 50%;
+            padding: 10px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .image-section,
+            .description-section {
+                flex: 1 1 100%;
+            }
+
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .card {
+                border: none;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-img-top {
+                height: 250px;
+                object-fit: cover;
+            }
+
+            .card-body {
+                text-align: center;
+            }
+
+            .btn {
+                border-radius: 30px;
+            }
+
+            .card-text i {
+                color: #6c757d;
+                /* Set the icon color */
+                margin-right: 5px;
+            }
+        }
+
+            /* Custom styles for the map container */
+            .carousel-item {
+                text-align: center;
+                /* Center the text */
+            }
+
+            .guest-image {
+                border-radius: 50%;
+                /* Circular images */
+                width: 100px;
+                /* Fixed width */
+                height: 100px;
+                /* Fixed height */
+                object-fit: cover;
+                /* Maintain aspect ratio */
+                margin-bottom: 15px;
+                /* Space between image and text */
+            }
+
+            .star-rating {
+                color: #f8c51c;
+                /* Gold color for stars */
+                font-size: 1.2rem;
+                /* Increase star size */
+            }
+
+            .review-text {
+                font-style: italic;
+                margin-top: 10px;
+            }
+            .footer {
+            background-color: #343a40; /* Dark background */
+            color: white; /* White text */
+            padding: 20px 0; /* Reduced vertical padding */
+            font-size: 14px; /* Slightly smaller font size */
+        }
+        .footer .logo {
+            width: 120px; /* Logo width */
+        }
+        .footer a {
+            color: #f8c51c; /* Gold color for links */
+            text-decoration: none; /* Remove underline */
+        }
+        .footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .social-icons a {
+            margin: 0 8px; /* Spacing between icons */
+            color: #f8c51c; /* Gold color for icons */
+        }
+        .social-icons a:hover {
+            color: #fff; /* White on hover */
+        }
+        @media (max-width: 768px) {
+            .footer .logo {
+                width: 100px; /* Adjust logo size on smaller screens */
+            }
+            .d-flex {
+        flex-direction: column; /* Stack vertically */
     }
-</script>
+        }
+        /* Media query to stack elements vertically on smaller screens */
+   
+
+    .d-flex > div {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add space between stacked elements */
+    }
+
+
+        
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openWhatsApp() {
+            var phoneNumber = "+918767932356"; // Enter the recipient's phone number in international format
+
+            var url = `https://wa.me/${phoneNumber}`;
+            window.open(url, '_blank'); // Opens WhatsApp in a new tab
+        }
+        // Get the carousel element
+       
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,19 +168,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#carouselExampleRide">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Book Rooms</a>
+                        <a class="nav-link" href="#bookrooms">Book Rooms</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#imagegallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactus">Contact Us</a>
 
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
+        <!-- Change 3000 to your desired interval in milliseconds -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="imag1.jpg" class="d-block w-100" alt="...">
@@ -86,91 +206,252 @@
         </button>
     </div>
 
-   
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col p-5">
-          <div class="card h-100">
-            <img src="imag1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Hotel Silver</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" onclick="openWhatsApp()" class="btn btn-primary">Book Hotel</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-5">
-          <div class="card h-100">
-            <img src="image2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Hotel SilverPalace</h5>
-              <p class="card-text  ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" class="btn btn-primary">Book Hotel</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-5">
-          <div class="card h-100">
-            <img src="image3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">StarResort</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Book Hotel</a>
-            </div>
-          </div>
-        </div>
 
-      </div>
+
+    <div class="container my-4" id="bookrooms">
+        <div class="row justify-content-center">
+            <!-- Hotel Card 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="image3.jpg" class="card-img-top" alt="Hotel 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Rooms</h5>
+
+                        <p class="card-text">
+                            <span class="badge bg-success">⭐⭐⭐⭐☆</span> <br>
+                            <i class="fas fa-bed"></i> <strong>2 Beds</strong> &nbsp;•&nbsp;
+                            <i class="fas fa-bath"></i> <strong>1 Bathroom</strong>
+                        </p>
+                        <p>Experience tradition and nature
+
+                        </p>
+                        <a href="#" onclick="openWhatsApp()" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Card 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="imag1.jpg" class="card-img-top" alt="Hotel 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Couple Rooms</h5>
+                        <p class="card-text">
+                            <span class="badge bg-success">⭐⭐⭐⭐☆</span> <br>
+                            <i class="fas fa-bed"></i> <strong>3 Beds</strong> &nbsp;•&nbsp;
+                            <i class="fas fa-bath"></i> <strong>2 Bathrooms</strong>
+                        </p>
+                        <p>Experience tradition and nature </p>
+                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Card 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="image2.jpg" class="card-img-top" alt="Hotel 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium rooms​</h5>
+                        <p class="card-text">
+                            <span class="badge bg-success">⭐⭐⭐⭐⭐</span> <br>
+                            <i class="fas fa-bed"></i> <strong>4 Beds</strong> &nbsp;•&nbsp;
+                            <i class="fas fa-bath"></i> <strong>3 Bathrooms</strong>
+                        </p>
+                        <p>Experience tradition and nature
+
+                        </p>
+                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="container mt-4">
+        <div class="flex-container">
+            <div class="image-section">
+                <img src="image3.jpg" alt="Sample Image">
+            </div>
+            <div class="description-section">
+                <h2 class="text-center">Hotel SilverPalce</h2>
+                <p>
+                    Indulge in the perfect fusion of design and comfort at Silver Palm Retreat, nestled in the heart of
+                    the enchanting locale of Chikmagalur. Our commitment to your well-being extends beyond mere
+                    hospitality. Every element of our establishment reflects our dedication to both your comfort and
+                    environmental.
+                    ensuring a serene and harmonious environment within every room. Your well-being is at the forefront
+                    of our design philosophy, ensuring an experience that is both luxurious and environmentally
+                    considerate.
+                </p>
+            </div>
+        </div>
     </div>
-   <div class="container mt-4">
-  <div class="flex-container">
-    <div class="image-section">
-      <img src="image3.jpg" alt="Sample Image">
+    <div class="container mt-4" id="imagegallery">
+        <h2 class="text-center">Image Gallery</h2>
+
+        <div class="row gallery">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="imag1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="image2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="image3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="imag1.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="image2.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="image3.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
     </div>
-    <div class="description-section">
-      <h2 class="text-center">Hotel SilverPalce</h2>
-      <p>
-        Indulge in the perfect fusion of design and comfort at Silver Palm Retreat, nestled in the heart of the enchanting locale of Chikmagalur. Our commitment to your well-being extends beyond mere hospitality. Every element of our establishment reflects our dedication to both your comfort and environmental.
- ensuring a serene and harmonious environment within every room. Your well-being is at the forefront of our design philosophy, ensuring an experience that is both luxurious and environmentally considerate.
-      </p>
+    <h3 class="mt-4 text-center">PRIOR BOOKING INFORMATION</h3>
+    <ol class="list-group list-group-numbered p-5">
+        <li class="list-group-item">50% Advance needs to be paid to confirm the booking.</li>
+        <li class="list-group-item">Balance Payment to be paid Upon Arrival.</li>
+        <li class="list-group-item">Guests should produce valid Indian Govt. ID during Check-in ( Aadhar / PAN / Driving
+            license / Voters ID / Passport ) . The Person booking should be above 21 years of age. Declaration form to
+            be signed prior check-in. Child below 5 years Complimentary (need adhar card of child).</li>
+        <li class="list-group-item">Standard Facilities Includes: Indoor & Out Door Games.</li>
+        <li class="list-group-item">Children Aged between 5 to 12 years charged at half price of adults package, below 5
+            years is complimentary . Kids to be accompanied by an adult all time in the property , as management is not
+            responsible for any damages , losses and accident</li>
+        <li class="list-group-item">MC/PA system & Team Building Activities can be provided on request at additional
+            Cost.</li>
+        <li class="list-group-item">Full refund if cancelled before 7 days of Check-in.</li>
+
+    </ol>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">What Our Guests Say</h2>
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="person1.jpg" alt="Guest 1" class="guest-image">
+                    <h5 class="reviewer-name">Sarah Wilson</h5>
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"Absolutely loved my stay! The staff was incredibly friendly, and the view
+                        from my room was breathtaking."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="person2.jpg" alt="Guest 2" class="guest-image">
+                    <h5 class="reviewer-name">David Lee</h5>
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"A fantastic experience! The amenities were top-notch, and the food was
+                        delicious. I will definitely return!"</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="person3.jpg" alt="Guest 3" class="guest-image">
+                    <h5 class="reviewer-name">Emma Johnson</h5>
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"A perfect getaway for relaxation! The spa services were exceptional, and the
+                        surroundings were so peaceful."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="person4.webp" alt="Guest 4" class="guest-image">
+                    <h5 class="reviewer-name">Michael Brown</h5>
+                    <div class="star-rating">★★★★★</div>
+                    <p class="review-text">"Loved every moment! The hotel’s location is perfect, and the staff went
+                        above and beyond to ensure our comfort."</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-  </div>
-</div>
-<div class="container mt-4">
-    <h2 class="text-center">Image Gallery</h2>
+
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between">
+                    <!-- YouTube Video Iframe -->
+                    <div class="mb-3 mb-lg-0" style="flex: 1; margin-right: 10px;">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/Zv5YxxclYYc?si=t90AohcaeYctksMb"
+                                title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    </div>
     
-    <div class="row gallery">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="imag1.jpg" alt="Gallery Image 1">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="image2.jpg" alt="Gallery Image 2">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="image3.jpg" alt="Gallery Image 3">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="imag1.jpg" alt="Gallery Image 4">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="image2.jpg" alt="Gallery Image 5">
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <img src="image3.jpg" alt="Gallery Image 6">
-      </div>
+                    <!-- Contact Us Card -->
+                    <div class="card mb-4 mb-lg-0" style="flex: 1;" id="contactus">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Contact Us</h5>
+                            <p class="card-text">
+                                <strong>Silver Palm Retreat</strong><br>
+                                Hirekolale, Lake Road, Naraganahalli,<br>
+                                Karnataka 577101, India.
+                            </p>
+                            <p class="card-text">
+                                <i class="fas fa-phone-alt"></i> <strong>Call Us:</strong> <br>
+                                @917676742198, 918310184632, 919448490809
+                            </p>
+                            <p class="card-text fst-italic">
+                                “Visit our beautiful location during any season.<br>
+                                Discounts available all year round.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <h3 class="mt-4 text-center">PRIOR BOOKING INFORMATION</h3>
-  <ol class="list-group list-group-numbered p-5">
-    <li class="list-group-item">50% Advance needs to be paid to confirm the booking.</li>
-    <li class="list-group-item">Balance Payment to be paid Upon Arrival.</li>
-    <li class="list-group-item">Guests should produce valid Indian Govt. ID during Check-in ( Aadhar / PAN / Driving license / Voters ID / Passport ) . The Person booking should be above 21 years of age. Declaration form to be signed prior check-in. Child below 5 years Complimentary (need adhar card of child).</li>
-    <li class="list-group-item">Standard Facilities Includes:  Indoor & Out Door Games.</li>
-    <li class="list-group-item">Children Aged between 5 to 12 years charged at half price of adults package, below 5 years is complimentary . Kids to be accompanied by an adult all time in the property , as management is not responsible for any damages , losses and accident</li>
-    <li class="list-group-item">MC/PA system & Team Building Activities can be provided on request at additional Cost.</li>
-    <li class="list-group-item">Full refund if cancelled before 7 days of Check-in.</li>
 
-</ol>
+    <div class="container my-4">
+        <h2>Visit Us at Silver Palm Retreat</h2>
+        <div class="ratio ratio-16x9">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d48444.63311025408!2d75.69644823128056!3d13.347743387680435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bbad841dda4a175%3A0x9c90c25cef990076!2sSilver%20Palm%20Retreat%208PXQ%2B336%20lake%20Road%20HirekoLale%2C%20Nagenahalli%2C%20Karnataka%20577101!3m2!1d13.3476552!2d75.7376484!5e1!3m2!1sen!2sin!4v1727169289619!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <img src="logo.png" alt="Hotel Logo" class="logo mb-2"> <!-- Replace with your logo -->
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <h5>Contact Us</h5>
+                    <p>Email: <a href="mailto:info@silverpalmretreat.in">info@silverpalmretreat.in</a></p>
+                    <p>Phone: +91 91767 67421</p>
+                    <p>Address: Hirekolale, Lake Road, Naraganahalli,<br>Karnataka 577101, India.</p>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-2" style="border-top: 1px solid #f8c51c;">
+            <p>© 2024 Silver Palm Retreat. All Rights Reserved.</p>
+            <p>Developed by <a href="https://goandroidapp.com/index.php" target="_blank">Manu G</a></p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
