@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Stay</title>
+    <link rel="Website icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .flex-container {
             display: flex;
             flex-wrap: wrap;
@@ -70,77 +76,411 @@
             }
         }
 
-            /* Custom styles for the map container */
-            .carousel-item {
+        /* Custom styles for the map container */
+        .carousel-item {
+            text-align: center;
+            /* Center the text */
+        }
+
+        .guest-image {
+            border-radius: 50%;
+            /* Circular images */
+            width: 100px;
+            /* Fixed width */
+            height: 100px;
+            /* Fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            margin-bottom: 15px;
+            /* Space between image and text */
+        }
+
+        .star-rating {
+            color: #f8c51c;
+            /* Gold color for stars */
+            font-size: 1.2rem;
+            /* Increase star size */
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            /* Dark background */
+            color: white;
+            /* White text */
+            padding: 20px 0;
+            /* Reduced vertical padding */
+            font-size: 14px;
+            /* Slightly smaller font size */
+        }
+
+        .footer .logo {
+            width: 120px;
+            /* Logo width */
+        }
+
+        .footer a {
+            color: #f8c51c;
+            /* Gold color for links */
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+
+        .social-icons a {
+            margin: 0 8px;
+            /* Spacing between icons */
+            color: #f8c51c;
+            /* Gold color for icons */
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+            /* White on hover */
+        }
+
+        @media (max-width: 768px) {
+            .footer .logo {
+                width: 100px;
+                /* Adjust logo size on smaller screens */
+            }
+
+            .d-flex {
+                flex-direction: column;
+                /* Stack vertically */
+            }
+        }
+
+        .d-flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+        /* Container for video and contact */
+        .video-contact-container {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            /* Adjusting the alignment */
+        }
+
+        /* YouTube Video Styling */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Adding shadow like Silver Palm website */
+            margin-bottom: 20px;
+            /* Adding margin at the bottom */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contact Us Card Styling */
+        .contact-card {
+            background-color: #f7f7f7;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            height: auto;
+            /* Ensure auto height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design for Flex Layout */
+        @media (min-width: 992px) {
+            .video-wrapper {
+                width: 48%;
+                /* Adjusting width for desktop */
+                height: auto;
+                /* Auto height to keep aspect ratio */
+            }
+
+            .contact-card {
+                width: 48%;
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        /* Mobile Layout Adjustments */
+        @media (max-width: 991px) {
+
+            .video-wrapper,
+            .contact-card {
+                width: 100%;
+            }
+        }
+
+        /* Contact Card Typography */
+        .contact-card h5 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .contact-details i {
+            margin-right: 8px;
+        }
+
+        .image-container {
+            margin-bottom: 30px;
+        }
+
+        .custom-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .info-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .info-section h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .stats-section {
+            background-color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .stats-section h3 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stats-section p {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .icon-bar {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        .icon-bar a {
+            display: block;
+            padding: 16px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .icon-bar a:hover {
+            background-color: #155724;
+        }
+
+        @media (max-width: 768px) {
+            .info-section h2 {
+                font-size: 20px;
+            }
+
+            .info-section p {
+                font-size: 14px;
+            }
+
+            .stats-section h3 {
+                font-size: 24px;
+            }
+
+            .stats-section p {
+                font-size: 16px;
+            }
+        }
+
+        /* Retreat Section Container */
+        .retreat-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Flex container for the row with image and text */
+        .retreat-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* space between columns */
+        }
+
+        .retreat-col {
+            flex: 1;
+            /* Equal column width */
+            min-width: 300px;
+            /* Ensures it doesn't shrink too much on small devices */
+        }
+
+        .retreat-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .retreat-text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .retreat-text-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .retreat-text-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Flex container for the stats section */
+        .retreat-stats {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .retreat-stat-item {
+            flex: 1;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        .retreat-stat-item h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .retreat-stat-item p {
+            font-size: 14px;
+        }
+
+        /* Responsive adjustments for tablets and smaller screens */
+        @media (max-width: 768px) {
+
+            /* Stack image and text columns vertically */
+            .retreat-row {
+                flex-direction: column;
+            }
+
+            .retreat-text-content h2 {
+                font-size: 20px;
+            }
+
+            .retreat-text-content p {
+                font-size: 14px;
+            }
+
+            /* Stack stats vertically on small devices */
+            .retreat-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .retreat-stat-item {
+                flex: none;
+                width: 100%;
+            }
+        }
+
+        /* Responsive adjustments for mobile devices */
+        @media (max-width: 576px) {
+            .retreat-image {
+                max-height: 300px;
+            }
+
+            .retreat-text-content h2 {
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 15px;
                 text-align: center;
                 /* Center the text */
             }
 
-            .guest-image {
-                border-radius: 50%;
-                /* Circular images */
-                width: 100px;
-                /* Fixed width */
-                height: 100px;
-                /* Fixed height */
-                object-fit: cover;
-                /* Maintain aspect ratio */
-                margin-bottom: 15px;
-                /* Space between image and text */
+            .retreat-text-content p {
+                font-size: 13px;
             }
 
-            .star-rating {
-                color: #f8c51c;
-                /* Gold color for stars */
-                font-size: 1.2rem;
-                /* Increase star size */
+            .retreat-stat-item h3 {
+                font-size: 20px;
             }
 
-            .review-text {
-                font-style: italic;
-                margin-top: 10px;
+            .retreat-stat-item p {
+                font-size: 12px;
             }
-            .footer {
-            background-color: #343a40; /* Dark background */
-            color: white; /* White text */
-            padding: 20px 0; /* Reduced vertical padding */
-            font-size: 14px; /* Slightly smaller font size */
         }
-        .footer .logo {
-            width: 120px; /* Logo width */
-        }
-        .footer a {
-            color: #f8c51c; /* Gold color for links */
-            text-decoration: none; /* Remove underline */
-        }
-        .footer a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-        .social-icons a {
-            margin: 0 8px; /* Spacing between icons */
-            color: #f8c51c; /* Gold color for icons */
-        }
-        .social-icons a:hover {
-            color: #fff; /* White on hover */
-        }
-        @media (max-width: 768px) {
-            .footer .logo {
-                width: 100px; /* Adjust logo size on smaller screens */
-            }
-            .d-flex {
-        flex-direction: column; /* Stack vertically */
-    }
-        }
-        /* Media query to stack elements vertically on smaller screens */
-   
-
-    .d-flex > div {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add space between stacked elements */
-    }
-
-
-        
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -150,40 +490,56 @@
             var url = `https://wa.me/${phoneNumber}`;
             window.open(url, '_blank'); // Opens WhatsApp in a new tab
         }
+        function openWhatsApp1() {
+            var phoneNumber = "+917204774056"; // Enter the recipient's phone number in international format
+
+            var url = `https://wa.me/${phoneNumber}`;
+            window.open(url, '_blank'); // Opens WhatsApp in a new tab
+        }
         // Get the carousel element
-       
+
     </script>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <!-- Bootstrap JavaScript and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nb"
+                aria-controls="nb" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+
+            <div class="collapse navbar-collapse justify-content-end" id="nb">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#carouselExampleRide">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#bookrooms">Book Rooms</a>
+                        <a class="nav-link" href="#bookrooms">Book Room</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#imagegallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contactus">Contact Us</a>
-
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <!-- Change 3000 to your desired interval in milliseconds -->
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -213,12 +569,12 @@
             <!-- Hotel Card 1 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="image3.jpg" class="card-img-top" alt="Hotel 1 Image">
+                    <img src="hm1.jpeg" class="card-img-top" alt="Hotel 1 Image">
                     <div class="card-body">
                         <h5 class="card-title">Luxury Rooms</h5>
 
                         <p class="card-text">
-                            <span class="badge bg-success">⭐⭐⭐⭐☆</span> <br>
+                            <span class="badge ">⭐⭐⭐⭐☆</span> <br>
                             <i class="fas fa-bed"></i> <strong>2 Beds</strong> &nbsp;•&nbsp;
                             <i class="fas fa-bath"></i> <strong>1 Bathroom</strong>
                         </p>
@@ -233,11 +589,11 @@
             <!-- Hotel Card 2 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="imag1.jpg" class="card-img-top" alt="Hotel 2 Image">
+                    <img src="hm2.jpeg" class="card-img-top" alt="Hotel 2 Image">
                     <div class="card-body">
                         <h5 class="card-title">Couple Rooms</h5>
                         <p class="card-text">
-                            <span class="badge bg-success">⭐⭐⭐⭐☆</span> <br>
+                            <span class="badge ">⭐⭐⭐⭐☆</span> <br>
                             <i class="fas fa-bed"></i> <strong>3 Beds</strong> &nbsp;•&nbsp;
                             <i class="fas fa-bath"></i> <strong>2 Bathrooms</strong>
                         </p>
@@ -250,11 +606,11 @@
             <!-- Hotel Card 3 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="image2.jpg" class="card-img-top" alt="Hotel 3 Image">
+                    <img src="hm3.jpeg" class="card-img-top" alt="Hotel 3 Image">
                     <div class="card-body">
                         <h5 class="card-title">Premium rooms​</h5>
                         <p class="card-text">
-                            <span class="badge bg-success">⭐⭐⭐⭐⭐</span> <br>
+                            <span class="badge ">⭐⭐⭐⭐⭐</span> <br>
                             <i class="fas fa-bed"></i> <strong>4 Beds</strong> &nbsp;•&nbsp;
                             <i class="fas fa-bath"></i> <strong>3 Bathrooms</strong>
                         </p>
@@ -267,26 +623,42 @@
             </div>
         </div>
     </div>
-
-    <div class="container mt-4">
-        <div class="flex-container">
-            <div class="image-section">
-                <img src="image3.jpg" alt="Sample Image">
+    <div class="retreat-container">
+        <div class="retreat-row">
+            <!-- Column for Image -->
+            <div class="retreat-col">
+                <img src="imag1.jpg" alt="Silver Palm Retreat" class="retreat-image">
             </div>
-            <div class="description-section">
-                <h2 class="text-center">Hotel SilverPalce</h2>
-                <p>
-                    Indulge in the perfect fusion of design and comfort at Silver Palm Retreat, nestled in the heart of
+            <!-- Column for Text and Stats -->
+            <div class="retreat-col retreat-text-content">
+                <h2>Welcome to Silver Palm Retreat</h2>
+                <p>Indulge in the perfect fusion of design and comfort at Silver Palm Retreat, nestled in the heart of
                     the enchanting locale of Chikmagalur. Our commitment to your well-being extends beyond mere
                     hospitality. Every element of our establishment reflects our dedication to both your comfort and
-                    environmental.
-                    ensuring a serene and harmonious environment within every room. Your well-being is at the forefront
-                    of our design philosophy, ensuring an experience that is both luxurious and environmentally
-                    considerate.
-                </p>
+                    environmental sustainability. Ensuring a serene and harmonious environment within every room. Your
+                    well-being is at the forefront of our design philosophy, ensuring an experience that is both
+                    luxurious and environmentally considerate.</p>
+
+                <!-- Stats Section -->
+                <div class="retreat-stats">
+                    <div class="retreat-stat-item">
+                        <h3>5+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="retreat-stat-item">
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="retreat-stat-item">
+                        <h3>15+</h3>
+                        <p>Trained Staff</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
     <div class="container mt-4" id="imagegallery">
         <h2 class="text-center">Image Gallery</h2>
 
@@ -333,29 +705,29 @@
         <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="person1.jpg" alt="Guest 1" class="guest-image">
-                    <h5 class="reviewer-name">Sarah Wilson</h5>
+                    <img src="iperson.jpg" alt="Guest 1" class="guest-image">
+                    <h5 class="reviewer-name">Parmit Singh</h5>
                     <div class="star-rating">★★★★★</div>
                     <p class="review-text">"Absolutely loved my stay! The staff was incredibly friendly, and the view
                         from my room was breathtaking."</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="person2.jpg" alt="Guest 2" class="guest-image">
-                    <h5 class="reviewer-name">David Lee</h5>
+                    <img src="iperson1.jpg" alt="Guest 2" class="guest-image">
+                    <h5 class="reviewer-name">Shivam Pandey</h5>
                     <div class="star-rating">★★★★★</div>
                     <p class="review-text">"A fantastic experience! The amenities were top-notch, and the food was
                         delicious. I will definitely return!"</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="person3.jpg" alt="Guest 3" class="guest-image">
-                    <h5 class="reviewer-name">Emma Johnson</h5>
+                    <img src="iperson2.jpg" alt="Guest 3" class="guest-image">
+                    <h5 class="reviewer-name">Predeep Patel</h5>
                     <div class="star-rating">★★★★★</div>
                     <p class="review-text">"A perfect getaway for relaxation! The spa services were exceptional, and the
                         surroundings were so peaceful."</p>
                 </div>
                 <div class="carousel-item">
                     <img src="person4.webp" alt="Guest 4" class="guest-image">
-                    <h5 class="reviewer-name">Michael Brown</h5>
+                    <h5 class="reviewer-name">Kalpesh Sananse</h5>
                     <div class="star-rating">★★★★★</div>
                     <p class="review-text">"Loved every moment! The hotel’s location is perfect, and the staff went
                         above and beyond to ensure our comfort."</p>
@@ -372,41 +744,38 @@
         </div>
     </div>
 
-    <div class="container my-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between">
-                    <!-- YouTube Video Iframe -->
-                    <div class="mb-3 mb-lg-0" style="flex: 1; margin-right: 10px;">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/Zv5YxxclYYc?si=t90AohcaeYctksMb"
-                                title="YouTube video" allowfullscreen></iframe>
-                        </div>
-                    </div>
-    
-                    <!-- Contact Us Card -->
-                    <div class="card mb-4 mb-lg-0" style="flex: 1;" id="contactus">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Contact Us</h5>
-                            <p class="card-text">
-                                <strong>Silver Palm Retreat</strong><br>
-                                Hirekolale, Lake Road, Naraganahalli,<br>
-                                Karnataka 577101, India.
-                            </p>
-                            <p class="card-text">
-                                <i class="fas fa-phone-alt"></i> <strong>Call Us:</strong> <br>
-                                @917676742198, 918310184632, 919448490809
-                            </p>
-                            <p class="card-text fst-italic">
-                                “Visit our beautiful location during any season.<br>
-                                Discounts available all year round.”
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <div class="container" id="contactus">
+        <!-- Container for YouTube Video and Contact Us Section -->
+        <div class="video-contact-container">
+
+            <!-- YouTube Video Section -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Zv5YxxclYYc?si=t90AohcaeYctksMb" title="YouTube video"
+                    allowfullscreen></iframe>
             </div>
+
+            <!-- Contact Us Card Section -->
+            <div class="contact-card">
+                <h5>Contact Us</h5>
+                <p><strong>Silver Palm Retreat</strong></p>
+                <p>Hirekolale, Lake Road, Naraganahalli,</p>
+                <p>Karnataka 577101, India.</p>
+
+                <div class="contact-details">
+                    <p><i class="fas fa-phone-alt"></i> +91 7676 742 198</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 8310 184 632</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 9448 490 809</p>
+                </div>
+
+                <p class="fst-italic mt-3">
+                    “Visit our beautiful location during any season.<br>
+                    Discounts available all year round.”
+                </p>
+            </div>
+
         </div>
     </div>
+
 
     <div class="container my-4">
         <h2>Visit Us at Silver Palm Retreat</h2>
@@ -425,10 +794,10 @@
                 <div class="col-md-4 mb-2">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#carouselExampleRide">Home</a></li>
+                        <li><a href="#bookrooms">Book Rooms</a></li>
+                        <li><a href="#imagegallery">Gallery</a></li>
+                        <li><a href="#contactus">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-2">
@@ -449,7 +818,7 @@
             </div>
             <hr class="my-2" style="border-top: 1px solid #f8c51c;">
             <p>© 2024 Silver Palm Retreat. All Rights Reserved.</p>
-            <p>Developed by <a href="https://goandroidapp.com/index.php" target="_blank">Manu G</a></p>
+            <p onclick="openWhatsApp1()" style="text-decoration: underline; color: #f8c51c;">Developed by : Manu G +91 7204774056 </p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
