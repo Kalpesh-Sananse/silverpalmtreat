@@ -481,6 +481,45 @@
                 font-size: 12px;
             }
         }
+        .floating-buttons-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Space between buttons */
+            z-index: 1000;
+        }
+
+        /* Style for individual buttons */
+        .floating-button {
+            background-color: #25D366; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        /* Hover effect */
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .floating-button {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -509,6 +548,11 @@
     <!-- Bootstrap JavaScript and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+<div class="floating-buttons-container">
+    <a href="tel:+917676742198" class="floating-button">&#128222;</a>
+    <a href="tel:+918310184632" class="floating-button">&#128222;</a>
+    <a href="tel:+919448490809" class="floating-button">&#128222;</a>
+</div>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -542,14 +586,12 @@
     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <!-- Change 3000 to your desired interval in milliseconds -->
         <div class="carousel-inner">
+          
             <div class="carousel-item active">
-                <img src="imag1.jpg" class="d-block w-100" alt="...">
+                <img src="sl2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="image2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="image3.jpg" class="d-block w-100" alt="...">
+                <img src="sl3.png" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -569,7 +611,7 @@
             <!-- Hotel Card 1 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="hm1.jpeg" class="card-img-top" alt="Hotel 1 Image">
+                    <img src="bd1.jpg" class="card-img-top" alt="Hotel 1 Image">
                     <div class="card-body">
                         <h5 class="card-title">Luxury Rooms</h5>
 
@@ -589,7 +631,7 @@
             <!-- Hotel Card 2 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="hm2.jpeg" class="card-img-top" alt="Hotel 2 Image">
+                    <img src="bd1.jpg" class="card-img-top" alt="Hotel 2 Image">
                     <div class="card-body">
                         <h5 class="card-title">Couple Rooms</h5>
                         <p class="card-text">
@@ -606,7 +648,7 @@
             <!-- Hotel Card 3 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card">
-                    <img src="hm3.jpeg" class="card-img-top" alt="Hotel 3 Image">
+                    <img src="bd1.jpg" class="card-img-top" alt="Hotel 3 Image">
                     <div class="card-body">
                         <h5 class="card-title">Premium rooms​</h5>
                         <p class="card-text">
@@ -627,7 +669,7 @@
         <div class="retreat-row">
             <!-- Column for Image -->
             <div class="retreat-col">
-                <img src="imag1.jpg" alt="Silver Palm Retreat" class="retreat-image">
+                <img src="sl1.png" alt="Silver Palm Retreat" class="retreat-image">
             </div>
             <!-- Column for Text and Stats -->
             <div class="retreat-col retreat-text-content">
@@ -664,13 +706,13 @@
 
         <div class="row gallery">
             <div class="col-lg-4 col-md-6 mb-4">
-                <img src="imag1.jpg" alt="Gallery Image 1">
+                <img src="sl3.png" alt="Gallery Image 1">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <img src="image2.jpg" alt="Gallery Image 2">
+                <img src="sl2.png"Gallery Image 2">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <img src="image3.jpg" alt="Gallery Image 3">
+                <img src="sl3.png" alt="Gallery Image 3">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <img src="imag1.jpg" alt="Gallery Image 4">
@@ -685,7 +727,7 @@
     </div>
     <h3 class="mt-4 text-center">PRIOR BOOKING INFORMATION</h3>
     <ol class="list-group list-group-numbered p-5">
-        <li class="list-group-item">50% Advance needs to be paid to confirm the booking.</li>
+        <li class="list-group-item ">50% Advance needs to be paid to confirm the booking.</li>
         <li class="list-group-item">Balance Payment to be paid Upon Arrival.</li>
         <li class="list-group-item">Guests should produce valid Indian Govt. ID during Check-in ( Aadhar / PAN / Driving
             license / Voters ID / Passport ) . The Person booking should be above 21 years of age. Declaration form to
