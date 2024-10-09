@@ -451,47 +451,45 @@ body {
         text-align: center;
     }
 
-}
-
-.floating-buttons-container {
+}.floating-buttons-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* Space between buttons */
-    z-index: 1000;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+    z-index: 1000; /* Ensure buttons are on top of other content */
 }
 
-/* Style for individual buttons */
 .floating-button {
-    background-color: #25D366;
-    /* Button color */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    background-color: #007bff; /* Adjust to your desired color */
+    color: white; /* Icon color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular buttons */
+    width: 60px; /* Size of the button */
+    height: 60px; /* Size of the button */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 24px;
-    transition: transform 0.3s;
+    font-size: 24px; /* Size of the icon */
+    text-decoration: none; /* No underline */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
-/* Hover effect */
 .floating-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
 }
 
 /* Responsive adjustments */
+
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .floating-button {
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
+        width: 50px; /* Smaller size for mobile */
+        height: 50px; /* Smaller size for mobile */
+        font-size: 20px; /* Smaller icon size for mobile */
     }
 }
 /* Card Container */
