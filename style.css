@@ -1,0 +1,647 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-section,
+.description-section {
+    flex: 1 1 50%;
+    padding: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+#imagegallery h1{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+
+}
+
+.gallery img {
+    width: 97%; /* Change as needed */
+    margin: 10px;
+    border-radius: 2px; /* Optional: rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly zoom in */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+/* Custom styles for the map container */
+.carousel-item {
+    text-align: center;
+    /* Center the text */
+}
+
+.guest-image {
+    border-radius: 50%;
+    /* Circular images */
+    width: 100px;
+    /* Fixed width */
+    height: 100px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    margin-bottom: 5px;
+    /* Space between image and text */
+}
+
+.star-rating {
+    margin-top: -10px;
+    color: #f8c51c;
+    /* Gold color for stars */
+    font-size: 1.2rem;
+    /* Increase star size */
+}
+
+.review-text {
+    font-style: italic;
+    
+}
+
+.footer {
+    background-color: #343a40;
+    /* Dark background */
+    color: white;
+    /* White text */
+    padding: 20px 0;
+    /* Reduced vertical padding */
+    font-size: 14px;
+    /* Slightly smaller font size */
+}
+
+.footer .logo {
+    width: 120px;
+    /* Logo width */
+}
+
+.footer a {
+    color: #f8c51c;
+    /* Gold color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.social-icons a {
+    margin: 0 8px;
+    /* Spacing between icons */
+    color: #f8c51c;
+    /* Gold color for icons */
+}
+
+.social-icons a:hover {
+    color: #fff;
+    /* White on hover */
+}
+
+@media (max-width: 768px) {
+    .footer .logo {
+        width: 100px;
+        /* Adjust logo size on smaller screens */
+    }
+
+    .d-flex {
+        flex-direction: column;
+        /* Stack vertically */
+    }
+}
+
+.d-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* Container for video and contact */
+.video-contact-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Adjusting the alignment */
+}
+
+/* YouTube Video Styling */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adding shadow like Silver Palm website */
+    margin-bottom: 20px;
+    /* Adding margin at the bottom */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact Us Card Styling */
+.contact-card {
+    background-color: #f7f7f7;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    height: auto;
+    /* Ensure auto height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design for Flex Layout */
+@media (min-width: 992px) {
+    .video-wrapper {
+        width: 48%;
+        /* Adjusting width for desktop */
+        height: auto;
+        /* Auto height to keep aspect ratio */
+    }
+
+    .contact-card {
+        width: 48%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Mobile Layout Adjustments */
+@media (max-width: 991px) {
+
+    .video-wrapper,
+    .contact-card {
+        width: 100%;
+    }
+}
+
+/* Contact Card Typography */
+.contact-card h5 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Contact Details */
+.contact-details {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact-details i {
+    margin-right: 8px;
+}
+
+.image-container {
+    margin-bottom: 30px;
+}
+
+.custom-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.info-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.stats-section {
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.stats-section h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stats-section p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    padding: 16px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #155724;
+}
+
+@media (max-width: 768px) {
+    .info-section h2 {
+        font-size: 20px;
+    }
+
+    .info-section p {
+        font-size: 14px;
+    }
+
+    .stats-section h3 {
+        font-size: 24px;
+    }
+
+    .stats-section p {
+        font-size: 16px;
+    }
+}
+
+/* Retreat Section Container */
+.retreat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flex container for the row with image and text */
+.retreat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* space between columns */
+}
+
+.retreat-col {
+    flex: 1;
+    /* Equal column width */
+    min-width: 300px;
+    /* Ensures it doesn't shrink too much on small devices */
+}
+
+.retreat-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.retreat-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.retreat-text-content h2 {
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:'Roboto', sans-serif; ;
+    margin-bottom: 15px;
+}
+
+.retreat-text-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Flex container for the stats section */
+.retreat-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.retreat-stat-item h1{
+    font-size: 48px;
+    /* Larger font similar to the example site */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 0;
+    /* Remove margin */
+}
+
+.retreat-stat-item p {
+    font-size: 16px;
+    /* Adjusted to match a similar style */
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+    /* Space between the number and description */
+}
+
+/* Optional: Add some padding or margins to the .retreat-stats for spacing */
+.retreat-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+
+    /* Stack image and text columns vertically */
+    .retreat-row {
+        flex-direction: column;
+    }
+
+    .retreat-text-content h2 {
+        font-size: 20px;
+    }
+
+    .retreat-text-content p {
+        font-size: 14px;
+    }
+
+    /* Stack stats vertically on small devices */
+    .retreat-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .retreat-stat-item {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 576px) {
+    .retreat-image {
+        max-height: 300px;
+    }
+
+    .retreat-stat-item h3 {
+
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .retreat-stat-item p {
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+    }
+
+}
+
+.floating-buttons-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between buttons */
+    z-index: 1000;
+}
+
+/* Style for individual buttons */
+.floating-button {
+    background-color: #25D366;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.floating-button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+/* Card Container */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px; /* Add some rounding for a modern look */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+/* Image Settings */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Card Body Text Align */
+.card-body {
+    text-align: center;
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Title Styling */
+.card-title {
+    font-size: 10 rem; /* Responsive font size */
+    font-weight: bold; /* Bold text for the title */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Text Badge Styling */
+.card-text .badge {
+    font-size: 1rem; /* Set the font size for the badge */
+    margin-bottom: 10px;
+}
+
+/* Icons */
+.card-text i {
+    color: #6c757d;
+    margin-right: 5px;
+}
+
+/* Booking Button Styling */
+.btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%; /* Full width button */
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 1200px) {
+    .card-img-top {
+        height: 220px;
+    }
+
+    .card-title {
+        font-size: 2.3rem; /* Slightly reduce font size */
+    }
+
+    .btn {
+        font-size: 0.95rem; /* Adjust button size */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 2.2rem; /* Further reduce font size */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Button size adjustment for mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 180px; /* Smaller image height */
+    }
+
+    .card-title {
+        font-size: 2rem; /* Smaller title for mobile */
+    }
+
+    .btn {
+        font-size: 0.85rem; /* Adjust button size */
+        padding: 8px 15px;
+    }
+}
+
+.navbar {
+    font-family: 'Roboto', sans-serif; /* Set the font family */
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition on scroll */
+}
+
+.navbar-brand img {
+    width: 50px; /* Decreased logo size */
+    height: 50px; /* Keep aspect ratio */
+    transition: transform 0.3s ease; /* Animation for logo on hover */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slightly increase logo size on hover */
+}
+
+.nav-link {
+    color: #007bff; /* Link color */
+    font-weight: 500; /* Medium weight for links */
+    font-size: 18px; /* Increased font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Darker color on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.dropdown-menu {
+    border-radius: 0; /* Square dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef; /* Light background on dropdown item hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0; /* Less padding for smaller screens */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Adjust font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 40px; /* Smaller logo for mobile */
+        height: 40px; /* Keep aspect ratio */
+    }
+}
